@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head> <style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+    
+    li {
+        float: left;
+    }
+    
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    
+    li a:hover:not(.active) {
+        background-color: #111;
+    }
+    
+    .active {
+        background-color: #4CAF50;
+    }
+    </style>
+    </head>
+<body>
+    <ul>
+        <li><a href="/accueil">Accueil</a></li>
+        <li><a href="/biblio">Bibliothèque</a></li>
+        <li><a href="/add_livre">Ajout livre</a></li>
+        <li style="float:right"><a class="active" href="/logout">Déconnexion</a></li>
+      </ul>
+
+    <p>Bienvenue {{user}}</p>
+
+    <form action="/homepage" method="get">
+        <p> Répondez aux questions le plus honnètement possible: </p>
+        <ol><input type="radio" name="categorie" value="S">Scientifique</input></ol>
+        <ol><input type="radio" name="categorie" value="D">Divertissement</input></ol>
+        <ol><input type="radio" name="categorie" value="E">Education</input></ol>
+        <ol><input type="radio" name="categorie" value="L">Littérature</input></ol>
+        <p><input type="submit" value="valider"></input></p>
+    </form>
+            
+        
+
+</body>
+</html>

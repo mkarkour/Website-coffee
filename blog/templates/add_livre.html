@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html><head><tittle><h1>Ajoutez votre livre</h1></tittle></head>
+<body> 
+    <form action="/add_livre" method="get">
+    <p>Titre de l'ouvrage : <input type="text" name="titre"></input></p>
+    <p>Auteur de l'ouvrage : <input type="text" name="auteur"></input></p>
+    <p> Selon vous il appartient à quelles catégories ? : </p>
+    <ol><input type="radio" name="categorie" value="S">Scientifique</input></ol>
+    <ol><input type="radio" name="categorie" value="D">Divertissement</input></ol>
+    <ol><input type="radio" name="categorie" value="E">Education</input></ol>
+    <ol><input type="radio" name="categorie" value="L">Littérature</input></ol>
+    <p><input type="submit" value="valider"></input></p>
+    </form>
+
+    <p>{{success}}</p>
+    <a href="http://www.localhost:8000/homepage" type="button" >retour</a>
+</body>
+</html>

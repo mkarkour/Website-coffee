@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html><head><tittle><h1>Bibliothèque</h1></tittle>
+<h3>Vous trouverez ici l'ensemble des livres répertorié</h3>
+</head>
+<body>
+    <table> 
+        <style>
+            table {
+              font-family: arial, sans-serif;
+              border-collapse: collapse;
+              width: 100%;
+            }
+            
+            td, th {
+              border: 1px solid #000000;
+              text-align: left;
+              padding: 8px;
+            }
+            
+            tr:nth-child(even) {
+              background-color: #DAF7A6 ;
+            }
+            </style>
+    <tr><th>Titre</th>
+        <th>Auteur</th>
+        <th>catégorie</th>
+        <th>classification</th>
+        </tr>
+    {% for livre in b%}
+    <tr>
+        <td>{{livre.titre}}</td>
+        <td>{{livre.auteur}}</td>
+        <td>{{livre.categorie}}</td>
+        <td>{{livre.id_livre}}</td>
+    </tr>
+    {%endfor%}
+    </table>
+
+
+
+    <a href="http://www.localhost:8000/homepage"> Retour</a>
+</body>
+</html>
